@@ -32,8 +32,9 @@ public class Main {
         l2.next.next = new ListNode(4);
         toListNodeString(l2);
 
-        Solution_Yu solution = new Solution_Yu();
-        toListNodeString(solution.mergeTwoLists(null, l2));
+//        Solution_Yu solution = new Solution_Yu();
+        Solution_01 solution = new Solution_01();
+        toListNodeString(solution.mergeTwoLists(l1, l2));
     }
 
     public static void toListNodeString(ListNode listNode) {
