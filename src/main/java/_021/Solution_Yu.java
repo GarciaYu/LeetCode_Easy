@@ -28,7 +28,6 @@ public class Solution_Yu {
                 nextNode.next = new ListNode(val1);
                 l1 = l1.next;
                 val1 = l1 == null ? Integer.MAX_VALUE : l1.val;
-
             } else {
                 nextNode.next = new ListNode(val2);
                 l2 = l2.next;

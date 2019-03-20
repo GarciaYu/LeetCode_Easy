@@ -30,7 +30,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {1, 1, 2};
+        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         Solution_Yu solution = new Solution_Yu();
         int length = solution.removeDuplicates(nums);
         System.out.println(Arrays.toString(nums));
