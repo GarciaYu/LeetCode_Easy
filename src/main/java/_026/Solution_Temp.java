@@ -2,7 +2,7 @@ package _026;
 
 import java.util.*;
 
-public class Solution_Yu_Temp {
+public class Solution_Temp {
     public int removeDuplicates(int[] nums) {
         if (nums == null) {
             return 0;

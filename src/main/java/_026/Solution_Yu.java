@@ -1,12 +1,21 @@
 package _026;
 
 public class Solution_Yu {
+    /*
+    Approach
+    Time Complexity: 99.8%
+    Space Complexity: 76%
+     */
     public int removeDuplicates(int[] nums) {
         if (nums == null) {
             return 0;
         }
         int nonDuplicateIndex = 0;
-        for (int i = 0; i < nums.length - 1; i++) {
+        int i = 0;
+        while (i < nums.length) {
+            nums[nonDuplicateIndex] = nums[i];
+            nonDuplicateIndex++;
+
             int duplicateLen = 0;
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] == nums[j]) {
@@ -15,12 +24,13 @@ public class Solution_Yu {
                     break;
                 }
             }
+
             if (duplicateLen > 0) {
-                nonDuplicateIndex++;
-                i = i + duplicateLen;
-                nums[nonDuplicateIndex] = nums[i + 1];
+                i += duplicateLen + 1;
+            } else {
+                i++;
             }
         }
-        return nonDuplicateIndex + 1;
+        return nonDuplicateIndex;
     }
 }
